@@ -62,14 +62,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "todo-app:build"
-          },
           "configurations": {
+            "development": {
+              "browserTarget": "todo-app:build:development"
+            },
             "production": {
               "browserTarget": "todo-app:build:production"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
